@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+    <div class="tasks-container">
+        {% if messages %}
+            {% for i in messages %}
+                <p>{{i}}</p>
+            {% endfor %}
+        {% endif %}
+        {% if users %}
+            {% for i in users %}
+                <div class="task">
+                    <div class="task-name"><strong>Task Name:</strong> {{ i.name }}</div>
+                    <div class="task-desc"><strong>Description:</strong> {{ i.desc }}</div>
+                    <div class="task-date"><strong>Task Date:</strong> {{ i.date }}</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No tasks available.</p>
+        {% endif %}
+    </div>
+{% endblock %}

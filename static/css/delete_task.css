@@ -1,0 +1,89 @@
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.task {
+    position: relative; /* To position the "Delete" link relative to the task */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task div {
+    margin-bottom: 10px;
+}
+
+.task-name,
+.task-desc,
+.task-date {
+    font-size: 16px;
+}
+
+.task-name strong,
+.task-desc strong,
+.task-date strong {
+    font-weight: bold;
+}
+
+/* Style for "Delete" link */
+.delete-link {
+    position: absolute;
+    bottom: 5px; /* Adjust as needed */
+    right: 5px; /* Adjust as needed */
+    color: white; /* Text color of the link */
+    background-color: red; /* Background color of the link */
+    padding: 10px 20px; /* Padding for the link */
+    border-radius: 3px; /* Border radius for the link */
+    cursor: pointer; /* Cursor style */
+    text-decoration: none; /* Remove underline */
+}
+.delete-link:hover{
+    background-color: #bf2323;
+}
+
+
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for form labels */
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style for form input fields */
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+/* Style for form submit button */
+.form-submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #0056b3;
+}
