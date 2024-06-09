@@ -1,0 +1,39 @@
+.my-form {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 45px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: cadetblue;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input,
+.form-textarea,
+.form-submit {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-submit {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #45a049;
+}
+
+.form-input:focus,
+.form-submit:focus {
+    outline: none;
+    border-color: #4CAF50;
+}

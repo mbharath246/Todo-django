@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/delete_task.css' %}">
+
+<div class="form-container">
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="name" class="form-label">Enter Task Name</label>
+        <input type="text" name="name" id="name" class="form-input" required>
+        <input type="submit" value="Submit" class="form-submit">
+    </form>
+</div>
+
+
+<div class="tasks-container">
+    {% for message in messages %}
+        <div>{{ message }}</div>
+    {% endfor %}
+    {% if data %}
+        {% for i in data %}
+            <div class="task">
+                <div class="task-name"><strong>Task Name:</strong> {{ i.name }}</div>
+                <div class="task-desc"><strong>Description:</strong> {{ i.desc }}</div>
+                <div class="task-date"><strong>Task Date:</strong> {{ i.date }}</div>
+                <a href="/del/{{i.id}}" class="delete-link">Delete</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

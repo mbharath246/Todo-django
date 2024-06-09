@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+
+<header>
+  <nav class="nav-bar">
+    <div class="container">
+      <ul>
+        <li><img src="/static/img/bharath.png" alt="loading" class="logo"></li>
+        <li><a href="{% url 'home' %}"> Dashboard </a></li>
+        <li><a href="{% url 'add' %}"> Add Task </a></li>
+        <li><a href="{% url 'remove' %}"> Remove   </a></li>
+      </ul>
+      <div class="search">
+        <form method='post' action="{% url 'search' %}">
+          {% csrf_token %}
+          <input type="search" name="name" id="" required/>
+          <button type='submit' >Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
